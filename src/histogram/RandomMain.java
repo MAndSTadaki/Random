@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import randomNumberSamples.Uniform;
+import randomNumberExamples.Uniform;
 
 public class RandomMain {
 

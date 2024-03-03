@@ -2,7 +2,6 @@ package histogram;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -83,7 +82,7 @@ public class Histogram {
      * @return
      */
     public List<Point2D.Double> calculateFrequency() {
-        List<Point2D.Double> pList = Collections.synchronizedList(new ArrayList<>());
+        List<Point2D.Double> pList = new ArrayList<>();
         for (int i = 0; i < hist.length; i++) {
             double x = lowerBound + i * binWidth + binWidth / 2.;//binの中央値
             double y = (double) hist[i] / count / binWidth;//binに入る割合

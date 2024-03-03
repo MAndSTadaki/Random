@@ -1,0 +1,8 @@
+build/
+dist/
+nbproject/private/
+src/correlation/
+src/stiring/
+*.txt
+*.pdf
+*.py

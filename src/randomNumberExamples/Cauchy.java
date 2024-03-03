@@ -1,4 +1,4 @@
-package randomNumberSamples;
+package randomNumberExamples;
 
 import java.io.IOException;
 import java.util.function.Function;

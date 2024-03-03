@@ -1,6 +1,5 @@
 package randomNumbers;
 
-import java.io.IOException;
 import java.util.Random;
 import java.util.function.Function;
 
