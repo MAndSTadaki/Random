@@ -40,9 +40,7 @@ public class Histogram {
         this.lowerBound = lowerBound;
         this.binWidth = binWidth;
         int numBin = (int) ((upperBound - lowerBound) / binWidth);
-        if (lowerBound + numBin * binWidth < upperBound) {
-            numBin++;
-        }
+        if (lowerBound + numBin * binWidth < upperBound) { numBin++;}
         this.upperBound = lowerBound + numBin * binWidth;
         hist = new int[numBin];
     }
@@ -55,26 +53,16 @@ public class Histogram {
      */
     public boolean put(double x) {
         count++;
-        if (x < lowerBound || x >= upperBound) {
-            return false;
-        }
+        if (x < lowerBound || x >= upperBound) { return false;}
         //xが入るべきbinの番号を調べる
         int binIndex = (int) ((x - lowerBound) / binWidth);
         hist[binIndex]++;//bin のカウントを一つ増やす
         return true;
     }
 
-    public double getLowerBound() {
-        return lowerBound;
-    }
-
-    public double getUpperBound() {
-        return upperBound;
-    }
-
-    public int[] getHist() {
-        return hist;
-    }
+    public double getLowerBound() { return lowerBound; }
+    public double getUpperBound() { return upperBound;}
+    public int[] getHist() { return hist;}
 
     /**
      * 結果をリストとして取得する: 値は確率になるように規格化する
@@ -99,9 +87,7 @@ public class Histogram {
      */
     public double checkNormalization(List<Point2D.Double> pList) {
         double frequency = 0.;
-        for (Point2D.Double p : pList) {
-            frequency += p.y * binWidth;
-        }
+        for (Point2D.Double p : pList) { frequency += p.y * binWidth;}
         return frequency;
     }
 }
