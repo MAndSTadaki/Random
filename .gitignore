@@ -1,8 +1,6 @@
-build/
-dist/
-nbproject/private/
-src/correlation/
-src/stiring/
+target/
+src/main/java/correlation/
+src/main/java/stiring/
 *.txt
 *.pdf
 *.py
